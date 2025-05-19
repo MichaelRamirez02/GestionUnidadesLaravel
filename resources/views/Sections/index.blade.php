@@ -93,7 +93,7 @@
                     </tbody>
                 </table>
 
-                {{-- {{ $sections->appends(request()->except('page'))->links('components.customPagination') }} --}}
+                 {{ $sections->appends(request()->except('page'))->links('components.customPagination') }}
             </div>
         </div>
     </section>

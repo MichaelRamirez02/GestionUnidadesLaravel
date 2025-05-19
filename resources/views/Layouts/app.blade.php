@@ -2,6 +2,7 @@
 <html lang="en">
   @include('Layouts.head')
    <body>
+
    @include('layouts.header')
 
 @include('layouts.sidebar')
