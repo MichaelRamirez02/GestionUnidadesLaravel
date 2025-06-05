@@ -33,6 +33,11 @@ class PermissionsSeeder extends Seeder
             ['name' => 'updateRoles', 'description' => 'Actualizar Roles', 'module' => 'Roles'],
             ['name' => 'deleteRoles', 'description' => 'Eliminar Roles', 'module' => 'Roles'],
 
+            ["name" => "showUsers", "description" => "Ver Usuarios", "module" => "Users"],
+            ["name" => "createUsers", "description" => "Crear Usuarios", "module" => "Users"],
+            ["name" => "updateUsers", "description" => "Editar Usuarios", "module" => "Users"],
+            ["name" => "deleteUsers", "description" => "Eliminar Usuarios", "module" => "Users"],
+
         ];
 
         foreach($permissions as $permission) {

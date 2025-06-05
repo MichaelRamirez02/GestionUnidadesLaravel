@@ -84,6 +84,10 @@
                                             </div>
                                         </form>
 
+                                        <div class="text-center mt-3">
+                                            <a href="{{ route('forgotPassword') }}"> ¿Olvidaste tu contraseña?</a>
+                                        </div>
+
                                     </div>
                                 </div>
 
@@ -101,6 +105,19 @@
         <script src="https://code.jquery.com/jquery-3.7.1.min.js" integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
         <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
 
+        @if(session()->has('message'))
+
+            <script>
+                const message = @json(session('message'));
+
+                Swal.fire({
+                    title: message.content,
+                    icon: message.type
+                });
+            </script>
+
+        @endif
+
         @if ($errors->any())
             <script>
                 Swal.fire({
@@ -111,6 +128,8 @@
             </script>
         @endif
     </body>
+
+</html>
 
 </html>
 

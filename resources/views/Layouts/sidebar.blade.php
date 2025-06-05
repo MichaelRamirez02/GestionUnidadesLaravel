@@ -27,11 +27,21 @@
             </li>
         @endif
 
-           @if(\App\Helpers\RoleHelper::isAuthorized('Roles.showRoles'))
+
+        @if(\App\Helpers\RoleHelper::isAuthorized('Roles.showroles'))
             <li class="nav-item">
                 <a class="nav-link {{ Request::routeIs('roles.*') ? '' : 'collapsed' }}" href="{{ route('roles.index') }}">
                     <i class="bi bi-newspaper"></i>
                     <span>Roles</span>
+                </a>
+            </li>
+        @endif
+
+        @if(\App\Helpers\RoleHelper::isAuthorized('Usuarios.showUsers'))
+            <li class="nav-item">
+                <a class="nav-link {{ Request::routeIs('users.*') ? '' : 'collapsed' }}" href="{{ route('users.index') }}">
+                <i class="bi bi-file-person"></i>
+                <span>Usuarios</span>
                 </a>
             </li>
         @endif
